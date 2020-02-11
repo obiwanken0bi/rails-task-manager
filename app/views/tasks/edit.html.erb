@@ -1,11 +1,15 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="form">
+    <%= form_for(@task) do |f| %>
+      <h3><%= f.label :title %></h3>
+      <p class="field"><%= f.text_field :title %></p>
+      <h3><%= f.label :details %></h3>
+      <p class="field"><%= f.text_field :details %></p>
+      <h3><%= f.label :completed %></h3>
+      <p><%= f.check_box :completed %></p>
+      <div class="submit-btn"><%= f.submit %></div>
+    <% end %>
+  </div>
 
-<p><%= link_to "Back to list", tasks_path %></p>
+  <p class="link"><%= link_to "🔙 Back to list", tasks_path %></p>
+</div>
